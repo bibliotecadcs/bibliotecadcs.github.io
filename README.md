@@ -178,6 +178,12 @@ navegador bloquea las peticiones `fetch` a los JSON en `file://`.
 4. La URL de publicación aparece en Settings → Pages y también en el
    resumen del workflow, con forma `https://tu-usuario.github.io/repo/`.
 
+**Dónde está publicada ahora:** el repositorio es `bibliotecadcs/bibliotecadcs.github.io` (organización
+`bibliotecadcs`), así que la web vive en la raíz: **https://bibliotecadcs.github.io/**. Antes estaba en
+`sasrz.github.io/DCS/`, que ahora redirige a la dirección nueva (hay un repo mínimo `SasRZ/DCS` solo para eso). Si
+cambias de dirección otra vez, actualiza también `ORIGENES` en `ayuda/worker/wrangler.toml` (y redespliega el Worker),
+`BIBLIOTECA_URL` en `ayuda/indexar.py` y los enlaces guardados en la base de la ayuda.
+
 ## Créditos
 
 La web tiene una página **Créditos** (enlace junto al buscador). Se genera sola:
