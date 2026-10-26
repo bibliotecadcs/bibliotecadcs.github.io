@@ -11,7 +11,7 @@ database_id = "ee03dfaa-4152-4443-85c1-201e3c43d9ba"   # el id de la base de dat
 
 [vars]
 # Webs desde las que se acepta la caja de ayuda (el origen de GitHub Pages no incluye la ruta /DCS)
-ORIGENES = "https://sasrz.github.io,http://localhost:8080"
+ORIGENES = "https://bibliotecadcs.github.io,https://sasrz.github.io,http://localhost:8080"
 # Límites de preguntas por día
 LIMITE_DISPOSITIVO = "20"
 LIMITE_IP = "40"
