@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#14402a"/>
+      <stop offset="1" stop-color="#050b08"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#4dff88" stop-opacity="0"/>
+      <stop offset="1" stop-color="#4dff88" stop-opacity="0.5"/>
+    </linearGradient>
+    <clipPath id="c"><circle cx="256" cy="256" r="236"/></clipPath>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" fill="#050b08"/>
+  <circle cx="256" cy="256" r="246" fill="url(#bg)"/>
+
+  <g clip-path="url(#c)">
+    <!-- barrido -->
+    <path d="M256,256 L256,10 A246,246 0 0 1 430,82 Z" fill="url(#sweep)" transform="rotate(-25 256 256)"/>
+    <!-- anillos -->
+    <g fill="none" stroke="#4dff88" stroke-opacity="0.45" stroke-width="3">
+      <circle cx="256" cy="256" r="170"/>
+      <circle cx="256" cy="256" r="100"/>
+      <line x1="256" y1="10" x2="256" y2="502"/>
+      <line x1="10" y1="256" x2="502" y2="256"/>
+    </g>
+  </g>
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#4dff88" stroke-width="10"/>
+
+  <!-- caza central -->
+  <g filter="url(#glow)" fill="#9dffbc" transform="translate(256 262) rotate(-35) scale(2.7)">
+    <path d="M0,-46 L5,-20 L40,12 L40,20 L6,12 L6,30 L18,40 L18,46 L0,42 L-18,46 L-18,40 L-6,30 L-6,12 L-40,20 L-40,12 L-5,-20 Z"/>
+  </g>
+
+  <!-- trazas secundarias -->
+  <g fill="#4dff88" filter="url(#glow)">
+    <circle cx="110" cy="360" r="9"/>
+    <circle cx="410" cy="395" r="9"/>
+  </g>
+</svg>

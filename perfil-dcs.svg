@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#12331f"/>
+      <stop offset="1" stop-color="#050b08"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4dff88" stop-opacity="0"/>
+      <stop offset="1" stop-color="#4dff88" stop-opacity="0.55"/>
+    </linearGradient>
+    <clipPath id="scope"><circle cx="512" cy="460" r="360"/></clipPath>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <g id="jetF16">
+      <path d="M0,-46 L5,-20 L40,12 L40,20 L6,12 L6,30 L18,40 L18,46 L0,42 L-18,46 L-18,40 L-6,30 L-6,12 L-40,20 L-40,12 L-5,-20 Z"/>
+    </g>
+    <g id="jetF4">
+      <path d="M0,-50 L6,-24 L44,8 L48,18 L8,8 L8,30 L24,42 L24,48 L0,44 L-24,48 L-24,42 L-8,30 L-8,8 L-48,18 L-44,8 L-6,-24 Z"/>
+    </g>
+    <g id="jetM2000">
+      <path d="M0,-50 L5,-26 L46,34 L46,42 L8,38 L8,44 L0,48 L-8,44 L-8,38 L-46,42 L-46,34 L-5,-26 Z"/>
+    </g>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- marco -->
+  <rect x="24" y="24" width="976" height="976" rx="40" fill="none" stroke="#4dff88" stroke-opacity="0.35" stroke-width="3"/>
+  <g stroke="#4dff88" stroke-opacity="0.8" stroke-width="5" fill="none">
+    <path d="M24,90 V24 H90"/><path d="M934,24 H1000 V90"/>
+    <path d="M24,934 V1000 H90"/><path d="M934,1000 H1000 V934"/>
+  </g>
+
+  <!-- radar -->
+  <g clip-path="url(#scope)">
+    <circle cx="512" cy="460" r="360" fill="#06150d"/>
+    <path d="M512,460 L512,100 A360,360 0 0 1 800,244 Z" fill="url(#sweep)" transform="rotate(-20 512 460)"/>
+  </g>
+  <g fill="none" stroke="#4dff88" stroke-opacity="0.55" stroke-width="2">
+    <circle cx="512" cy="460" r="360" stroke-width="5" stroke-opacity="0.9"/>
+    <circle cx="512" cy="460" r="270"/>
+    <circle cx="512" cy="460" r="180"/>
+    <circle cx="512" cy="460" r="90"/>
+    <line x1="512" y1="100" x2="512" y2="820"/>
+    <line x1="152" y1="460" x2="872" y2="460"/>
+    <line x1="257" y1="205" x2="767" y2="715" stroke-opacity="0.25"/>
+    <line x1="767" y1="205" x2="257" y2="715" stroke-opacity="0.25"/>
+  </g>
+  <!-- marcas de rumbo -->
+  <g stroke="#4dff88" stroke-width="3" stroke-opacity="0.8">
+    <g id="ticks">
+      <line x1="512" y1="92" x2="512" y2="110"/>
+    </g>
+    <use href="#ticks" transform="rotate(30 512 460)"/><use href="#ticks" transform="rotate(60 512 460)"/>
+    <use href="#ticks" transform="rotate(90 512 460)"/><use href="#ticks" transform="rotate(120 512 460)"/>
+    <use href="#ticks" transform="rotate(150 512 460)"/><use href="#ticks" transform="rotate(180 512 460)"/>
+    <use href="#ticks" transform="rotate(210 512 460)"/><use href="#ticks" transform="rotate(240 512 460)"/>
+    <use href="#ticks" transform="rotate(270 512 460)"/><use href="#ticks" transform="rotate(300 512 460)"/>
+    <use href="#ticks" transform="rotate(330 512 460)"/>
+  </g>
+  <g fill="#4dff88" font-family="Consolas, 'Courier New', monospace" font-size="26" text-anchor="middle" opacity="0.9">
+    <text x="512" y="76">360</text>
+    <text x="900" y="470">090</text>
+    <text x="512" y="854">180</text>
+    <text x="124" y="470">270</text>
+  </g>
+
+  <!-- aeronaves en el radar con etiquetas de datos -->
+  <g filter="url(#glow)" fill="#7dffa8">
+    <use href="#jetF16" transform="translate(640 300) rotate(35) scale(0.9)"/>
+    <use href="#jetF4" transform="translate(360 330) rotate(-50) scale(0.9)"/>
+    <use href="#jetM2000" transform="translate(560 590) rotate(160) scale(0.9)"/>
+  </g>
+  <g stroke="#7dffa8" stroke-width="2" stroke-opacity="0.7" fill="none">
+    <polyline points="668,280 720,230 800,230"/>
+    <polyline points="332,310 290,250 230,250"/>
+    <polyline points="590,618 650,670 740,670"/>
+  </g>
+  <g fill="#7dffa8" font-family="Consolas, 'Courier New', monospace" font-size="24">
+    <text x="726" y="222">F-16C</text><text x="726" y="248" font-size="19" opacity="0.8">FL280 450</text>
+    <text x="150" y="242">F-4E</text><text x="150" y="268" font-size="19" opacity="0.8">FL190 380</text>
+    <text x="656" y="662">M-2000C</text><text x="656" y="688" font-size="19" opacity="0.8">FL240 420</text>
+  </g>
+
+  <!-- torre / centro -->
+  <circle cx="512" cy="460" r="9" fill="#4dff88" filter="url(#glow)"/>
+  <circle cx="512" cy="460" r="20" fill="none" stroke="#4dff88" stroke-width="2"/>
+
+  <!-- banda inferior -->
+  <rect x="80" y="872" width="864" height="112" rx="16" fill="#0a1a11" stroke="#4dff88" stroke-opacity="0.6" stroke-width="3"/>
+  <text x="512" y="930" fill="#e8fff0" font-family="'Arial Black', Impact, sans-serif" font-size="52" text-anchor="middle" letter-spacing="5">AIR TRAFFIC CONTROL</text>
+  <text x="512" y="967" fill="#4dff88" font-family="Consolas, 'Courier New', monospace" font-size="25" text-anchor="middle" letter-spacing="6">F-16C  •  F-4E  •  M-2000C</text>
+</svg>

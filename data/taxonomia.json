@@ -84,6 +84,9 @@
       { "nombre": "Europa 1944", "desc": "Mapas de la Segunda Guerra Mundial.", "color": "lila", "items": [
         {"id":"normandia","nombre":"Normandía 2","rol":"Costa de Normandía en 1944: el desembarco y los campos aliados.","chip":"WWII"},
         {"id":"canal","nombre":"The Channel","rol":"El Canal de la Mancha y el sureste de Inglaterra en 1944.","chip":"WWII"}
+      ]},
+      { "nombre": "Estandarización Fox3", "desc": "Procedimientos comunes del escuadrón para volar igual en cualquier mapa.", "color": "verde", "items": [
+        {"id":"fox3","nombre":"Cartas estándar FOX3","rol":"SID, STAR y aproximación TACAN comunes a todos los mapas, con la baliza SQD 111X del escuadrón.","chip":"ESCUADRÓN"}
       ]}
     ]
   },

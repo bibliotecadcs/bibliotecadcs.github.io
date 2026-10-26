@@ -1238,5 +1238,23 @@
       "aire-tierra"
     ],
     "autor": "Requiem's Air Combat Tutorial Library"
+  },
+  {
+    "id": "fox3-navegacion-estandarizada",
+    "titulo": "SQD FOX · Navegación estandarizada",
+    "tipo": "ZIP",
+    "nota": "Sistema para estandarizar la navegación en las misiones del escuadrón: herramienta para editores de misiones. Incluye las cartas SID, STAR y de aproximación estándar (PDF) y las plantillas de la baliza TACAN SQD 111X para el editor de DCS, una por mapa, con instalador (.bat) y LÉEME.",
+    "url": "docs/general/navegacion/sqd-fox-navegacion-estandarizada.zip",
+    "refs": ["general/navegacion"],
+    "etiquetas": ["TACAN", "SQD 111X", "FOX3", "editor", "plantillas", "SID", "STAR", "estandarización"]
+  },
+  {
+    "id": "fox3-cartas-estandar",
+    "titulo": "SQD FOX 3 · cartas estándar completas",
+    "tipo": "PDF",
+    "nota": "Cartas SID, STAR y de aproximación TACAN DME ARC comunes a todos los mapas, con la baliza SQD 111X. Se elige el sector (N, E, S u O) según la orientación de la pista en uso. 17 páginas: rosa de orientación y, por cada sector, portada, SID, STAR y APP. Vigentes desde el 26 oct 2026. Solo para DCS.",
+    "url": "docs/mapas/fox3/cartas-estandar.pdf",
+    "refs": ["mapas/fox3"],
+    "etiquetas": ["cartas", "SID", "STAR", "APP", "TACAN", "SQD 111X", "FOX3", "estandarización"]
   }
 ]
